@@ -119,30 +119,32 @@ end
 # packages are on the same version.
 BULLET_TRAIN_VERSION = "1.45.1"
 
-# Core packages.
-gem "bullet_train", BULLET_TRAIN_VERSION
-gem "bullet_train-super_scaffolding", BULLET_TRAIN_VERSION
-gem "bullet_train-api", BULLET_TRAIN_VERSION
-gem "bullet_train-outgoing_webhooks", BULLET_TRAIN_VERSION
-gem "bullet_train-incoming_webhooks", BULLET_TRAIN_VERSION
-gem "bullet_train-themes", BULLET_TRAIN_VERSION
-gem "bullet_train-themes-light", BULLET_TRAIN_VERSION
-gem "bullet_train-integrations", BULLET_TRAIN_VERSION
-gem "bullet_train-integrations-stripe", BULLET_TRAIN_VERSION
+git "https://github.com/tujucreative/bullet_train-core.git", branch: "main" do
+  # Core packages.
+  gem "bullet_train", BULLET_TRAIN_VERSION
+  gem "bullet_train-super_scaffolding", BULLET_TRAIN_VERSION
+  gem "bullet_train-api", BULLET_TRAIN_VERSION
+  gem "bullet_train-outgoing_webhooks", BULLET_TRAIN_VERSION
+  gem "bullet_train-incoming_webhooks", BULLET_TRAIN_VERSION
+  gem "bullet_train-themes", BULLET_TRAIN_VERSION
+  gem "bullet_train-themes-light", BULLET_TRAIN_VERSION
+  gem "bullet_train-integrations", BULLET_TRAIN_VERSION
+  gem "bullet_train-integrations-stripe", BULLET_TRAIN_VERSION
 
-# Optional support packages.
-gem "bullet_train-sortable", BULLET_TRAIN_VERSION
-gem "bullet_train-obfuscates_id", BULLET_TRAIN_VERSION
+  # Optional support packages.
+  gem "bullet_train-sortable", BULLET_TRAIN_VERSION
+  gem "bullet_train-obfuscates_id", BULLET_TRAIN_VERSION
 
-# Core gems that are dependencies of gems listed above. Technically they
-# shouldn't need to be listed here, but we list them so that we can keep
-# version numbers in sync.
-gem "bullet_train-fields", BULLET_TRAIN_VERSION
-gem "bullet_train-has_uuid", BULLET_TRAIN_VERSION
-gem "bullet_train-roles", BULLET_TRAIN_VERSION
-gem "bullet_train-scope_validator", BULLET_TRAIN_VERSION
-gem "bullet_train-super_load_and_authorize_resource", BULLET_TRAIN_VERSION
-gem "bullet_train-themes-tailwind_css", BULLET_TRAIN_VERSION
+  # Core gems that are dependencies of gems listed above. Technically they
+  # shouldn't need to be listed here, but we list them so that we can keep
+  # version numbers in sync.
+  gem "bullet_train-fields", BULLET_TRAIN_VERSION
+  gem "bullet_train-has_uuid", BULLET_TRAIN_VERSION
+  gem "bullet_train-roles", BULLET_TRAIN_VERSION
+  gem "bullet_train-scope_validator", BULLET_TRAIN_VERSION
+  gem "bullet_train-super_load_and_authorize_resource", BULLET_TRAIN_VERSION
+  gem "bullet_train-themes-tailwind_css", BULLET_TRAIN_VERSION
+end
 
 gem "devise", "~> 5.0"
 gem "devise-two-factor"

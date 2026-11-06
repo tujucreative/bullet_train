@@ -1,4 +1,4 @@
-# This workflow is for building the official bullet-train-co/bullet_train Docker image.
+# This workflow is for building the official tujucreative/bullet_train Docker image.
 name: "🚢 ~ Docker"
 
 on:
@@ -8,7 +8,7 @@ on:
 # Defines custom environment variables for the workflow. These are used for the Container registry domain, and a name for the Docker image that this workflow builds.
 env:
   REGISTRY: ghcr.io
-  PREVIEW_IMAGE_NAME: bullet-train-co/bullet_train
+  PREVIEW_IMAGE_NAME: tujucreative/bullet_train
 
 # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in these jobs.
 permissions:
@@ -50,7 +50,7 @@ jobs:
     uses: ./.github/workflows/_build_docker_image.yml
     secrets: inherit
     with:
-      image-name: bullet-train-co/bullet_train
+      image-name: tujucreative/bullet_train
       dockerfile: Dockerfile
       runs-on: ubuntu-24.04-arm
       platform: linux/arm64
@@ -61,7 +61,7 @@ jobs:
     uses: ./.github/workflows/_build_docker_image.yml
     secrets: inherit
     with:
-      image-name: bullet-train-co/bullet_train
+      image-name: tujucreative/bullet_train
       dockerfile: Dockerfile
       runs-on: ubuntu-latest
       platform: linux/amd64

@@ -21,7 +21,7 @@
 # Throw-away build stage to reduce size of final image
 # bullet_train/build provides build-time dependencies for all the gems in the starter repo.
 ARG BULLET_TRAIN_VERSION=FAKE.VERSION
-ARG FROM_IMAGE=ghcr.io/bullet-train-co/bullet_train/build:$BULLET_TRAIN_VERSION
+ARG FROM_IMAGE=ghcr.io/tujucreative/bullet_train/build:$BULLET_TRAIN_VERSION
 FROM $FROM_IMAGE AS build
 
 # ✅ ⬇️  Install your native build-time dependencies below
@@ -52,7 +52,7 @@ RUN SECRET_KEY_BASE_DUMMY=1 SPROCKETS_NO_EXPORT_CONCURRENT=1 ./bin/rails assets:
 #######################################################################################################
 # Final stage for app image
 # bullet_train/base provides run-time dependencies for everything used by the framework and starter repo.
-FROM ghcr.io/bullet-train-co/bullet_train/base:$BULLET_TRAIN_VERSION AS base
+FROM ghcr.io/tujucreative/bullet_train/base:$BULLET_TRAIN_VERSION AS base
 
 # ✅ ⬇️  Install your native runtime dependencies below
 

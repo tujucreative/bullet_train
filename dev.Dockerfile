@@ -23,7 +23,7 @@
 #######################################################################################################
 # bullet_train/dev provides dependencies
 ARG BULLET_TRAIN_VERSION=fake.version
-ARG FROM_IMAGE=ghcr.io/bullet-train-co/bullet_train/dev:$BULLET_TRAIN_VERSION
+ARG FROM_IMAGE=ghcr.io/tujucreative/bullet_train/dev:$BULLET_TRAIN_VERSION
 FROM $FROM_IMAGE AS dev
 
 # ✅ ⬇️  Install your native development dependencies below

@@ -92,7 +92,7 @@ jobs:
         if: ${{ inputs.use-core-repo == true }}
         with:
           target_dir: tmp/core
-          repository: bullet-train-co/bullet_train-core
+          repository: tujucreative/bullet_train-core
 
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@v1
